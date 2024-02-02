@@ -1,0 +1,373 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 1.0 (409.60.6)"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    reorder nameChildren = ["Bird", "Bird_1", "Bird_2", "Bird_3", "Bird_4"]
+    def "Bird" (
+        active = true
+        references = @Bird.usdz@
+    )
+    {
+        reorder nameChildren = ["raven_msh1", "root_jnt", "Looks"]
+        float3 xformOp:scale = (0.05, 0.05, 0.05)
+        float3 xformOp:translate = (0.48606458, 2.007224, -1.922952)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (8.822527, 1.1851711, 4.410681)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (-2.3841858e-7, 0.29168156, -0.23163468)
+                }
+            }
+        }
+
+        def RealityKitComponent "InputTarget"
+        {
+            uniform token info:id = "RealityKit.InputTarget"
+        }
+    }
+
+    def "Bird_2" (
+        active = true
+        references = @Bird.usdz@
+    )
+    {
+        float3 xformOp:scale = (0.05, 0.05, 0.05)
+        float3 xformOp:translate = (0.48606458, 1.7890645, -1.2623646)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "Looks"
+        {
+            over "Raven_matSG"
+            {
+                token outputs:surface.connect = </Root/Bird_2/Looks/Raven_matSG/Raven_mat.outputs:surface>
+
+                over "Raven_mat"
+                {
+                    color3f inputs:diffuseColor.connect = </Root/Bird_2/Looks/Raven_matSG/file3.outputs:rgb>
+                    normal3f inputs:normal.connect = </Root/Bird_2/Looks/Raven_matSG/file5.outputs:rgb>
+                    float inputs:roughness.connect = </Root/Bird_2/Looks/Raven_matSG/file4.outputs:a>
+                }
+
+                over "file3"
+                {
+                    float2 inputs:st.connect = </Root/Bird_2/Looks/Raven_matSG/place2dTexture3.outputs:result>
+                }
+
+                over "place2dTexture3"
+                {
+                    string inputs:varname.connect = </Root/Bird_2/Looks/Raven_matSG.inputs:file3:varname>
+                }
+
+                over "file4"
+                {
+                    float2 inputs:st.connect = </Root/Bird_2/Looks/Raven_matSG/place2dTexture4.outputs:result>
+                }
+
+                over "place2dTexture4"
+                {
+                    string inputs:varname.connect = </Root/Bird_2/Looks/Raven_matSG.inputs:file4:varname>
+                }
+
+                over "file5"
+                {
+                    float2 inputs:st.connect = </Root/Bird_2/Looks/Raven_matSG/place2dTexture5.outputs:result>
+                }
+
+                over "place2dTexture5"
+                {
+                    string inputs:varname.connect = </Root/Bird_2/Looks/Raven_matSG.inputs:file5:varname>
+                }
+            }
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (8.822527, 1.1851711, 4.410681)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (-2.3841858e-7, 0.29168156, -0.23163468)
+                }
+            }
+        }
+
+        def RealityKitComponent "InputTarget"
+        {
+            uniform token info:id = "RealityKit.InputTarget"
+        }
+    }
+
+    def "Bird_3" (
+        active = true
+        references = @Bird.usdz@
+    )
+    {
+        float3 xformOp:scale = (0.05, 0.05, 0.05)
+        float3 xformOp:translate = (0.9695108, 2.2164786, -2.8508012)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "Looks"
+        {
+            over "Raven_matSG"
+            {
+                token outputs:surface.connect = </Root/Bird_3/Looks/Raven_matSG/Raven_mat.outputs:surface>
+
+                over "Raven_mat"
+                {
+                    color3f inputs:diffuseColor.connect = </Root/Bird_3/Looks/Raven_matSG/file3.outputs:rgb>
+                    normal3f inputs:normal.connect = </Root/Bird_3/Looks/Raven_matSG/file5.outputs:rgb>
+                    float inputs:roughness.connect = </Root/Bird_3/Looks/Raven_matSG/file4.outputs:a>
+                }
+
+                over "file3"
+                {
+                    float2 inputs:st.connect = </Root/Bird_3/Looks/Raven_matSG/place2dTexture3.outputs:result>
+                }
+
+                over "place2dTexture3"
+                {
+                    string inputs:varname.connect = </Root/Bird_3/Looks/Raven_matSG.inputs:file3:varname>
+                }
+
+                over "file4"
+                {
+                    float2 inputs:st.connect = </Root/Bird_3/Looks/Raven_matSG/place2dTexture4.outputs:result>
+                }
+
+                over "place2dTexture4"
+                {
+                    string inputs:varname.connect = </Root/Bird_3/Looks/Raven_matSG.inputs:file4:varname>
+                }
+
+                over "file5"
+                {
+                    float2 inputs:st.connect = </Root/Bird_3/Looks/Raven_matSG/place2dTexture5.outputs:result>
+                }
+
+                over "place2dTexture5"
+                {
+                    string inputs:varname.connect = </Root/Bird_3/Looks/Raven_matSG.inputs:file5:varname>
+                }
+            }
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (8.822527, 1.1851711, 4.410681)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (-2.3841858e-7, 0.29168156, -0.23163468)
+                }
+            }
+        }
+
+        def RealityKitComponent "InputTarget"
+        {
+            uniform token info:id = "RealityKit.InputTarget"
+        }
+    }
+
+    def "Bird_4" (
+        active = true
+        references = @Bird.usdz@
+    )
+    {
+        float3 xformOp:scale = (0.05, 0.05, 0.05)
+        float3 xformOp:translate = (0.9501077, 1.9164723, -1.784221)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "Looks"
+        {
+            over "Raven_matSG"
+            {
+                token outputs:surface.connect = </Root/Bird_4/Looks/Raven_matSG/Raven_mat.outputs:surface>
+
+                over "Raven_mat"
+                {
+                    color3f inputs:diffuseColor.connect = </Root/Bird_4/Looks/Raven_matSG/file3.outputs:rgb>
+                    normal3f inputs:normal.connect = </Root/Bird_4/Looks/Raven_matSG/file5.outputs:rgb>
+                    float inputs:roughness.connect = </Root/Bird_4/Looks/Raven_matSG/file4.outputs:a>
+                }
+
+                over "file3"
+                {
+                    float2 inputs:st.connect = </Root/Bird_4/Looks/Raven_matSG/place2dTexture3.outputs:result>
+                }
+
+                over "place2dTexture3"
+                {
+                    string inputs:varname.connect = </Root/Bird_4/Looks/Raven_matSG.inputs:file3:varname>
+                }
+
+                over "file4"
+                {
+                    float2 inputs:st.connect = </Root/Bird_4/Looks/Raven_matSG/place2dTexture4.outputs:result>
+                }
+
+                over "place2dTexture4"
+                {
+                    string inputs:varname.connect = </Root/Bird_4/Looks/Raven_matSG.inputs:file4:varname>
+                }
+
+                over "file5"
+                {
+                    float2 inputs:st.connect = </Root/Bird_4/Looks/Raven_matSG/place2dTexture5.outputs:result>
+                }
+
+                over "place2dTexture5"
+                {
+                    string inputs:varname.connect = </Root/Bird_4/Looks/Raven_matSG.inputs:file5:varname>
+                }
+            }
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (8.822527, 1.1851711, 4.410681)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (-2.3841858e-7, 0.29168156, -0.23163468)
+                }
+            }
+        }
+
+        def RealityKitComponent "InputTarget"
+        {
+            uniform token info:id = "RealityKit.InputTarget"
+        }
+    }
+
+    def "Bird_1" (
+        active = true
+        references = @Bird.usdz@
+    )
+    {
+        float3 xformOp:scale = (0.05, 0.05, 0.05)
+        float3 xformOp:translate = (-0.13103893, 2.1482935, -1.9229449)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "Looks"
+        {
+            over "Raven_matSG"
+            {
+                token outputs:surface.connect = </Root/Bird_1/Looks/Raven_matSG/Raven_mat.outputs:surface>
+
+                over "Raven_mat"
+                {
+                    color3f inputs:diffuseColor.connect = </Root/Bird_1/Looks/Raven_matSG/file3.outputs:rgb>
+                    normal3f inputs:normal.connect = </Root/Bird_1/Looks/Raven_matSG/file5.outputs:rgb>
+                    float inputs:roughness.connect = </Root/Bird_1/Looks/Raven_matSG/file4.outputs:a>
+                }
+
+                over "file3"
+                {
+                    float2 inputs:st.connect = </Root/Bird_1/Looks/Raven_matSG/place2dTexture3.outputs:result>
+                }
+
+                over "place2dTexture3"
+                {
+                    string inputs:varname.connect = </Root/Bird_1/Looks/Raven_matSG.inputs:file3:varname>
+                }
+
+                over "file4"
+                {
+                    float2 inputs:st.connect = </Root/Bird_1/Looks/Raven_matSG/place2dTexture4.outputs:result>
+                }
+
+                over "place2dTexture4"
+                {
+                    string inputs:varname.connect = </Root/Bird_1/Looks/Raven_matSG.inputs:file4:varname>
+                }
+
+                over "file5"
+                {
+                    float2 inputs:st.connect = </Root/Bird_1/Looks/Raven_matSG/place2dTexture5.outputs:result>
+                }
+
+                over "place2dTexture5"
+                {
+                    string inputs:varname.connect = </Root/Bird_1/Looks/Raven_matSG.inputs:file5:varname>
+                }
+            }
+        }
+
+        over "raven_msh1"
+        {
+        }
+
+        over "root_jnt"
+        {
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (8.822527, 1.1851711, 4.410681)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (-2.3841858e-7, 0.29168156, -0.23163468)
+                }
+            }
+        }
+
+        def RealityKitComponent "InputTarget"
+        {
+            uniform token info:id = "RealityKit.InputTarget"
+        }
+    }
+}
+

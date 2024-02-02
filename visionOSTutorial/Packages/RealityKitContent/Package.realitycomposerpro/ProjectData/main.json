@@ -1,0 +1,11 @@
+{
+  "pathsToIds" : {
+    "..\/..\/ImmersiveScene.usda" : "FD5AE2BF-070C-4F03-A153-F8B62A1B75EE",
+    "\/RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/GridMaterial.usda" : "70F99620-18FE-438F-B2D5-5E0DA02AB759",
+    "\/RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Scene.usda" : "0A9B4653-B11E-4D6A-850E-C6FCB621626C",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/GridMaterial.usda" : "388995CA-80FC-432E-BA88-78270E4EFD9D",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/ImmersiveScene.usda" : "81027D9D-5643-40F5-A65A-C98FFDD144FC",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Scene.usda" : "90C576A0-F90A-43B8-9998-14918A66F863",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Untitled%20Scene.usda" : "123A6B4F-04A3-4C9F-AF66-48E2AD538CA9"
+  }
+}

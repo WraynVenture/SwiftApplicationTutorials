@@ -1,0 +1,244 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 1.0 (409.60.6)"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    def "Bird" (
+        active = true
+        prepend references = @Bird.usdz@
+    )
+    {
+        float3 xformOp:scale = (0.05, 0.05, 0.05)
+        float3 xformOp:translate = (0.50000036, 2.120724, -0.3602499)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "Bird_1" (
+        active = true
+        prepend references = @Bird.usdz@
+    )
+    {
+        float3 xformOp:scale = (0.05, 0.05, 0.05)
+        float3 xformOp:translate = (0, 1.4999979, -0.6535877)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "Looks"
+        {
+            over "Raven_matSG"
+            {
+                token outputs:surface.connect = </Root/Bird_1/Looks/Raven_matSG/Raven_mat.outputs:surface>
+
+                over "Raven_mat"
+                {
+                    color3f inputs:diffuseColor.connect = </Root/Bird_1/Looks/Raven_matSG/file3.outputs:rgb>
+                    normal3f inputs:normal.connect = </Root/Bird_1/Looks/Raven_matSG/file5.outputs:rgb>
+                    float inputs:roughness.connect = </Root/Bird_1/Looks/Raven_matSG/file4.outputs:a>
+                }
+
+                over "file3"
+                {
+                    float2 inputs:st.connect = </Root/Bird_1/Looks/Raven_matSG/place2dTexture3.outputs:result>
+                }
+
+                over "place2dTexture3"
+                {
+                    string inputs:varname.connect = </Root/Bird_1/Looks/Raven_matSG.inputs:file3:varname>
+                }
+
+                over "file4"
+                {
+                    float2 inputs:st.connect = </Root/Bird_1/Looks/Raven_matSG/place2dTexture4.outputs:result>
+                }
+
+                over "place2dTexture4"
+                {
+                    string inputs:varname.connect = </Root/Bird_1/Looks/Raven_matSG.inputs:file4:varname>
+                }
+
+                over "file5"
+                {
+                    float2 inputs:st.connect = </Root/Bird_1/Looks/Raven_matSG/place2dTexture5.outputs:result>
+                }
+
+                over "place2dTexture5"
+                {
+                    string inputs:varname.connect = </Root/Bird_1/Looks/Raven_matSG.inputs:file5:varname>
+                }
+            }
+        }
+    }
+
+    def "Bird_2" (
+        active = true
+        prepend references = @Bird.usdz@
+    )
+    {
+        float3 xformOp:scale = (0.05, 0.05, 0.05)
+        float3 xformOp:translate = (1.0000014, 2.5, 0.11255582)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "Looks"
+        {
+            over "Raven_matSG"
+            {
+                token outputs:surface.connect = </Root/Bird_2/Looks/Raven_matSG/Raven_mat.outputs:surface>
+
+                over "Raven_mat"
+                {
+                    color3f inputs:diffuseColor.connect = </Root/Bird_2/Looks/Raven_matSG/file3.outputs:rgb>
+                    normal3f inputs:normal.connect = </Root/Bird_2/Looks/Raven_matSG/file5.outputs:rgb>
+                    float inputs:roughness.connect = </Root/Bird_2/Looks/Raven_matSG/file4.outputs:a>
+                }
+
+                over "file3"
+                {
+                    float2 inputs:st.connect = </Root/Bird_2/Looks/Raven_matSG/place2dTexture3.outputs:result>
+                }
+
+                over "place2dTexture3"
+                {
+                    string inputs:varname.connect = </Root/Bird_2/Looks/Raven_matSG.inputs:file3:varname>
+                }
+
+                over "file4"
+                {
+                    float2 inputs:st.connect = </Root/Bird_2/Looks/Raven_matSG/place2dTexture4.outputs:result>
+                }
+
+                over "place2dTexture4"
+                {
+                    string inputs:varname.connect = </Root/Bird_2/Looks/Raven_matSG.inputs:file4:varname>
+                }
+
+                over "file5"
+                {
+                    float2 inputs:st.connect = </Root/Bird_2/Looks/Raven_matSG/place2dTexture5.outputs:result>
+                }
+
+                over "place2dTexture5"
+                {
+                    string inputs:varname.connect = </Root/Bird_2/Looks/Raven_matSG.inputs:file5:varname>
+                }
+            }
+        }
+    }
+
+    def "Bird_3" (
+        active = true
+        prepend references = @Bird.usdz@
+    )
+    {
+        float3 xformOp:scale = (0.05, 0.05, 0.05)
+        float3 xformOp:translate = (0.7, 1.7, -0.05)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "Looks"
+        {
+            over "Raven_matSG"
+            {
+                token outputs:surface.connect = </Root/Bird_3/Looks/Raven_matSG/Raven_mat.outputs:surface>
+
+                over "Raven_mat"
+                {
+                    color3f inputs:diffuseColor.connect = </Root/Bird_3/Looks/Raven_matSG/file3.outputs:rgb>
+                    normal3f inputs:normal.connect = </Root/Bird_3/Looks/Raven_matSG/file5.outputs:rgb>
+                    float inputs:roughness.connect = </Root/Bird_3/Looks/Raven_matSG/file4.outputs:a>
+                }
+
+                over "file3"
+                {
+                    float2 inputs:st.connect = </Root/Bird_3/Looks/Raven_matSG/place2dTexture3.outputs:result>
+                }
+
+                over "place2dTexture3"
+                {
+                    string inputs:varname.connect = </Root/Bird_3/Looks/Raven_matSG.inputs:file3:varname>
+                }
+
+                over "file4"
+                {
+                    float2 inputs:st.connect = </Root/Bird_3/Looks/Raven_matSG/place2dTexture4.outputs:result>
+                }
+
+                over "place2dTexture4"
+                {
+                    string inputs:varname.connect = </Root/Bird_3/Looks/Raven_matSG.inputs:file4:varname>
+                }
+
+                over "file5"
+                {
+                    float2 inputs:st.connect = </Root/Bird_3/Looks/Raven_matSG/place2dTexture5.outputs:result>
+                }
+
+                over "place2dTexture5"
+                {
+                    string inputs:varname.connect = </Root/Bird_3/Looks/Raven_matSG.inputs:file5:varname>
+                }
+            }
+        }
+    }
+
+    def "Bird_4" (
+        active = true
+        prepend references = @Bird.usdz@
+    )
+    {
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (0.05, 0.05, 0.05)
+        float3 xformOp:translate = (1.1542416, 1.9999999, -0.71909916)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "Looks"
+        {
+            over "Raven_matSG"
+            {
+                token outputs:surface.connect = </Root/Bird_4/Looks/Raven_matSG/Raven_mat.outputs:surface>
+
+                over "Raven_mat"
+                {
+                    color3f inputs:diffuseColor.connect = </Root/Bird_4/Looks/Raven_matSG/file3.outputs:rgb>
+                    normal3f inputs:normal.connect = </Root/Bird_4/Looks/Raven_matSG/file5.outputs:rgb>
+                    float inputs:roughness.connect = </Root/Bird_4/Looks/Raven_matSG/file4.outputs:a>
+                }
+
+                over "file3"
+                {
+                    float2 inputs:st.connect = </Root/Bird_4/Looks/Raven_matSG/place2dTexture3.outputs:result>
+                }
+
+                over "place2dTexture3"
+                {
+                    string inputs:varname.connect = </Root/Bird_4/Looks/Raven_matSG.inputs:file3:varname>
+                }
+
+                over "file4"
+                {
+                    float2 inputs:st.connect = </Root/Bird_4/Looks/Raven_matSG/place2dTexture4.outputs:result>
+                }
+
+                over "place2dTexture4"
+                {
+                    string inputs:varname.connect = </Root/Bird_4/Looks/Raven_matSG.inputs:file4:varname>
+                }
+
+                over "file5"
+                {
+                    float2 inputs:st.connect = </Root/Bird_4/Looks/Raven_matSG/place2dTexture5.outputs:result>
+                }
+
+                over "place2dTexture5"
+                {
+                    string inputs:varname.connect = </Root/Bird_4/Looks/Raven_matSG.inputs:file5:varname>
+                }
+            }
+        }
+    }
+}
+
